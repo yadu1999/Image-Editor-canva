@@ -1,0 +1,125 @@
+
+    @tailwind base;
+    @tailwind components;
+    @tailwind utilities;
+
+    @layer base {
+      :root {
+        --background: 0 0% 100%; 
+        --foreground: 224 71.4% 4.1%;
+
+        --card: 0 0% 100%;
+        --card-foreground: 224 71.4% 4.1%;
+
+        --popover: 0 0% 100%;
+        --popover-foreground: 224 71.4% 4.1%;
+
+        --primary: 256 84% 53%;
+        --primary-foreground: 0 0% 100%; 
+
+        --secondary: 220 13% 91%; 
+        --secondary-foreground: 224 71.4% 4.1%; 
+
+        --muted: 220 13% 91%; 
+        --muted-foreground: 220 8.9% 46.1%;
+
+        --accent: 220 13% 91%;
+        --accent-foreground: 224 71.4% 4.1%; 
+
+        --destructive: 0 84.2% 60.2%;
+        --destructive-foreground: 0 0% 100%;
+
+        --border: 220 13% 88%; 
+        --input: 220 13% 88%;
+        --ring: 256 84% 53%; 
+
+        --radius: 0.5rem;
+
+       
+        --canva-bg-primary: 247 250 252; 
+        --canva-bg-secondary: 237 242 247; 
+        --canva-bg-tertiary: 226 232 240; 
+        --canva-text-primary: 26 32 44; 
+        --canva-text-secondary: 74 85 104;
+        --canva-purple: 107 59 172; 
+        --canva-purple-light: 233 213 255; 
+        --canva-sidebar: 26 32 44; 
+      }
+
+      .dark {
+        --background: 224 71.4% 4.1%;
+        --foreground: 210 20% 98%;
+
+        --card: 224 71.4% 4.1%;
+        --card-foreground: 210 20% 98%;
+
+        --popover: 224 71.4% 4.1%;
+        --popover-foreground: 210 20% 98%;
+
+        --primary: 256 84% 53%;
+        --primary-foreground: 0 0% 100%;
+
+        --secondary: 215 27.9% 16.9%;
+        --secondary-foreground: 210 20% 98%;
+
+        --muted: 215 27.9% 16.9%;
+        --muted-foreground: 215 20.2% 65.1%;
+
+        --accent: 215 27.9% 16.9%;
+        --accent-foreground: 210 20% 98%;
+
+        --destructive: 0 62.8% 30.6%;
+        --destructive-foreground: 0 0% 100%;
+
+        --border: 215 27.9% 16.9%;
+        --input: 215 27.9% 16.9%;
+        --ring: 256 84% 53%;
+        
+        --canva-bg-primary: 26 32 44;
+        --canva-bg-secondary: 45 55 72;
+        --canva-bg-tertiary: 74 85 104;
+        --canva-text-primary: 247 250 252;
+        --canva-text-secondary: 226 232 240;
+        --canva-sidebar: 26 32 44; 
+      }
+    }
+
+    @layer base {
+      * {
+        @apply border-border;
+      }
+      body {
+        @apply bg-background text-foreground;
+        font-feature-settings: "rlig" 1, "calt" 1;
+        font-family: 'Inter', sans-serif;
+      }
+    }
+    
+    ::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: hsl(var(--secondary) / 0.5);
+      border-radius: 10px;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: hsl(var(--primary) / 0.6);
+      border-radius: 10px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: hsl(var(--primary) / 0.8);
+    }
+
+    .bg-canva-primary { background-color: rgb(var(--canva-bg-primary)); }
+    .bg-canva-secondary { background-color: rgb(var(--canva-bg-secondary)); }
+    .bg-canva-tertiary { background-color: rgb(var(--canva-bg-tertiary)); }
+    .text-canva-primary { color: rgb(var(--canva-text-primary)); }
+    .text-canva-secondary { color: rgb(var(--canva-text-secondary)); }
+    .bg-canva-purple { background-color: rgb(var(--canva-purple)); }
+    .text-canva-purple { color: rgb(var(--canva-purple)); }
+    .bg-canva-purple-light { background-color: rgb(var(--canva-purple-light)); }
+    .border-canva-purple { border-color: rgb(var(--canva-purple)); }
+    .bg-canva-sidebar { background-color: rgb(var(--canva-sidebar)); }
+
+  
